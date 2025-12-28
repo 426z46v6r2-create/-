@@ -1,0 +1,396 @@
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import PracticeAreasPreview from '@/components/PracticeAreasPreview';
+import ContactForm from '@/components/ContactForm';
+import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
+import AccessibilityWidget from '@/components/AccessibilityWidget';
+import { useLanguage } from '@/contexts/LanguageContext';
+import yafitPortrait from '@/assets/yafit-portrait.png';
+import iconContracts from '@/assets/icon-contracts.jpg';
+import iconRealEstate from '@/assets/icon-realestate.jpg';
+import iconWills from '@/assets/icon-wills.jpg';
+import iconPoa from '@/assets/icon-poa.jpg';
+import iconCorporate from '@/assets/icon-corporate.jpg';
+import iconBusiness from '@/assets/icon-business.jpg';
+import iconLitigation from '@/assets/icon-litigation.jpg';
+import iconAdvisory from '@/assets/icon-advisory.jpg';
+import { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+
+const Index = () => {
+  const { dir, language, t } = useLanguage();
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const contentHe = {
+    title: 'אודות — יפית שמעון טואטי',
+    mainText: `עו"ד יפית שמעון-טואטי מביאה עמה למעלה מ-16 שנות ניסיון משפטי ומקצועי נרחב במגוון תחומים, בהם דיני חוזים, נדל"ן, הקמת חברות וייעוץ עסקי, צוואות וירושות, וייפוי כוח מתמשך.
+
+עיסוקה המשפטי מאופיין בהבנה מעמיקה של החוק ובראייה רחבה וממוקדת-לקוח, המביאה בחשבון גם את האינטרסים המשפטיים וגם את השיקולים האישיים והרגשיים.
+
+מסלול הקריירה שלה כולל עבודה במשרד עורכי דין מוביל, שירות כיועצת משפטית ברשם החברות בישראל, ותפקיד של יועצת משפטית למשרדי ליטיגציה מסחרית מובילים - תפקיד בו היא ממשיכה לכהן.`,
+    practiceTitle: 'תחומי התמחות:',
+    practiceAreas: [
+      { title: 'דיני חוזים', icon: iconContracts },
+      { title: 'דיני מקרקעין (נדל"ן)', icon: iconRealEstate },
+      { title: 'צוואות וירושות', icon: iconWills },
+      { title: 'ייפוי כוח מתמשך', icon: iconPoa },
+      { title: 'הקמה וליווי חברות פרטיות', icon: iconCorporate },
+      { title: 'ליווי עסקים קטנים ובינוניים', icon: iconBusiness },
+      { title: 'ליטיגציה מסחרית', icon: iconLitigation },
+      { title: 'ייעוץ משפטי בתחום האזרחי על כל גווניו', icon: iconAdvisory }
+    ],
+    fullText: `עו"ד שמעון-טואטי סיימה את לימודי המשפטים ב-2008 כבוגרת ראשונה בקורס שמנה למעלה מ-120 סטודנטים, במסגרת תכנית הצטיינות של הרקטור.
+
+לאורך הקריירה, עו"ד שמעון-טואטי המשיכה להעמיק את המומחיות שלה באמצעות מגוון תכניות הכשרה משפטיות ועסקיות מתקדמות, כולל:
+• תכנית דירקטורים מוסמכים
+• משפט סטארט-אפ והייטק לעורכי דין
+• תכנון ופיתוח נדל"ן
+• תכנית יזמות הייטק
+• יישוב סכסוכים ומגשרות
+• הסמכה בייפוי כוח מתמשך
+
+מומחיות רחבה זו במגזר הפרטי והציבורי מאפשרת לה לנהל עניינים משפטיים בראייה כוללת וממוקדת-תוצאות.`
+  };
+
+  const contentEn = {
+    title: 'About — Yafit Shimon Touati',
+    mainText: `Attorney Yafit Shimon-Touati brings more than 16 years of extensive legal and professional experience in a range of fields, including contract law, real estate, corporate formation and consulting, wills and estates, and lasting powers of attorney.
+
+Her legal practice is characterized by a deep understanding of the law and a broad, client-centered perspective that takes into account both legal interests and personal, emotional considerations.
+
+Her career path includes working in a leading law firm, serving as legal counsel at the Israeli Registrar of Companies, and acting as a legal advisor to prominent commercial litigation firms—a position she continues to hold.`,
+    practiceTitle: 'Practice Areas:',
+    practiceAreas: [
+      { title: 'Contract Law', icon: iconContracts },
+      { title: 'Real Estate Law', icon: iconRealEstate },
+      { title: 'Wills & Estates', icon: iconWills },
+      { title: 'Lasting Powers of Attorney', icon: iconPoa },
+      { title: 'Corporate Formation & Private Companies', icon: iconCorporate },
+      { title: 'Small & Medium Business Consulting', icon: iconBusiness },
+      { title: 'Commercial Litigation', icon: iconLitigation },
+      { title: 'Civil Legal Advisory', icon: iconAdvisory }
+    ],
+    fullText: `Attorney Shimon-Touati earned her law degree in 2008, graduating first in her class of over 120 students, as part of the Rector's Honor Program.
+
+Throughout her career, Attorney Shimon-Touati has continued to deepen her expertise by completing a wide array of advanced legal and business training programs, including:
+• Certified Directors Program
+• Startup & High-Tech Law for Lawyers
+• Real Estate Planning & Development
+• High-Tech Entrepreneurship Program
+• Dispute Resolution & Mediation
+• Certification in Lasting Powers of Attorney
+
+This broad expertise across both the private and public sectors allows her to manage legal matters with a comprehensive and results-driven mindset.`
+  };
+
+  const contentFr = {
+    title: 'À propos — Yafit Shimon Touati',
+    mainText: `Maître Yafit Shimon-Touati apporte plus de 16 ans d'expérience juridique et professionnelle étendue dans divers domaines, notamment le droit des contrats, l'immobilier, la création d'entreprises et le conseil, les testaments et successions, et les procurations permanentes.
+
+Sa pratique juridique se caractérise par une compréhension approfondie du droit et une perspective large centrée sur le client, qui prend en compte à la fois les intérêts juridiques et les considérations personnelles et émotionnelles.
+
+Son parcours professionnel comprend le travail dans un cabinet d'avocats de premier plan, le service de conseiller juridique au registre des sociétés israélien, et le rôle de conseiller juridique auprès de cabinets de contentieux commercial de premier plan—un poste qu'elle continue d'occuper.`,
+    practiceTitle: 'Domaines de pratique:',
+    practiceAreas: [
+      { title: 'Droit des contrats', icon: iconContracts },
+      { title: 'Droit immobilier', icon: iconRealEstate },
+      { title: 'Testaments et successions', icon: iconWills },
+      { title: 'Procurations permanentes', icon: iconPoa },
+      { title: 'Formation et accompagnement d\'entreprises privées', icon: iconCorporate },
+      { title: 'Conseil aux PME', icon: iconBusiness },
+      { title: 'Contentieux commercial', icon: iconLitigation },
+      { title: 'Conseil juridique civil', icon: iconAdvisory }
+    ],
+    fullText: `Maître Shimon-Touati a obtenu son diplôme en droit en 2008, terminant première de sa promotion de plus de 120 étudiants, dans le cadre du programme d'honneur du Recteur.
+
+Tout au long de sa carrière, Maître Shimon-Touati a continué à approfondir son expertise en complétant un large éventail de programmes de formation juridique et commerciale avancés.`
+  };
+
+  // Philosophy content
+  const philosophyHe = {
+    title: 'אני מאמין',
+    subtitle: 'הגישה שלי: מקצועיות, אנושיות ונחישות להגעה לפתרון מיטבי',
+    intro: 'כבעלת המשרד אני מאמינה שמאחורי כל תיק משפטי עומדים אנשים עם רגשות אנושיים, חששות ואינטרסים לגיטימיים. אחרי שנים של ייצוג לקוחות, הבנתי שלהיות במחלוקת משפטית היא חוויה מורכבת ולא נעימה עבור כל המעורבים - גם כשצודקים.',
+    principles: [
+      { title: 'עמידה עניינית על זכויות', desc: 'נחישות מלאה להגן על האינטרסים של מי שאני מייצגת, ללא פשרות.' },
+      { title: 'דיוק ויסודיות כמפתח להצלחה', desc: 'עבודה משפטית איכותית דורשת התייחסות מדוקדקת לכל פרט.' },
+      { title: 'הפרדה בין העניין האישי למקצועי', desc: 'גם תקיפות נדרשת יכולה להישאר עניינית.' },
+      { title: 'שמירה על יחסים תקינים עם הצד השני', desc: 'יחסים טובים מובילים לתוצאות טובות.' },
+      { title: 'הפחתת מתח ועוינות', desc: 'ניהול מחלוקת בנועם ובכבוד, אך בנחישות.' },
+      { title: 'מיקוד בפתרון', desc: 'המטרה היא פתרון מיטבי, לא הנצחת הסכסוך.' }
+    ],
+    conclusion: 'במשרד שלי, לקוחות מקבלים ייצוג מקצועי ונחוש שמתנהל בגישה אנושית וחיובית. אני מאמינה שזו הדרך האפקטיבית ביותר להשיג תוצאות מיטביות, תוך שמירה על הבריאות הנפשית והרגשית של לקוחותיי.'
+  };
+
+  const philosophyEn = {
+    title: 'Our Philosophy',
+    subtitle: 'Professionalism, Compassion, and Resolution',
+    intro: 'As the firm\'s founder, I believe that behind every legal case, there are real people with legitimate needs and emotions. After years of practicing law, I\'ve come to deeply understand how stressful and complex legal disputes can be - even when you\'re right.',
+    principles: [
+      { title: 'Resolute Protection of Rights', desc: 'I defend my clients\' interests with unwavering dedication.' },
+      { title: 'Precision & Thoroughness', desc: 'High-quality legal work means attention to every detail.' },
+      { title: 'Professional-Personal Balance', desc: 'Even in adversarial situations, I separate legal tasks from personal conflict.' },
+      { title: 'Constructive Communication', desc: 'Maintaining respectful, open dialogue with opposing counsel often leads to better results.' },
+      { title: 'Minimizing Hostility', desc: 'I aim to handle disputes with respect and professionalism.' },
+      { title: 'Solution-Focused Representation', desc: 'The goal is resolution - not perpetuation.' }
+    ],
+    conclusion: 'At our firm, clients receive determined, expert legal representation grounded in empathy and clarity. This is the most effective way to reach successful outcomes while protecting the emotional well-being of those we represent.'
+  };
+
+  const philosophyFr = {
+    title: 'Notre Philosophie',
+    subtitle: 'Professionnalisme, Compassion et Résolution',
+    intro: 'En tant que fondatrice du cabinet, je crois que derrière chaque affaire juridique, il y a de vraies personnes avec des besoins et des émotions légitimes.',
+    principles: [
+      { title: 'Protection Résolue', desc: 'Je défends les intérêts de mes clients avec dévouement.' },
+      { title: 'Précision', desc: 'Un travail juridique de qualité.' },
+      { title: 'Équilibre', desc: 'Je sépare les tâches juridiques du conflit personnel.' },
+      { title: 'Communication', desc: 'Dialogue respectueux et ouvert.' },
+      { title: 'Minimiser l\'Hostilité', desc: 'Gérer avec respect.' },
+      { title: 'Résolution', desc: 'L\'objectif est la résolution.' }
+    ],
+    conclusion: 'Représentation juridique déterminée et experte.'
+  };
+
+  // Firm Principles content
+  const principlesHe = {
+    title: 'העקרונות המנחים של המשרד',
+    intro: 'במשרד עו"ד יפית שמעון־טואטי דוגלים בכך שמשפט הוא לא רק חוק ופסיקה – הוא קודם כל אנשים. כל תיק, כל עסקה וכל התלבטות משפטית מלווים ברגשות, לחצים, תקוות וגם לא מעט בלבול.',
+    values: [
+      'נחישות והגנה חסרת פשרות על זכויות הלקוח',
+      'דיוק ויסודיות',
+      'יושר ואמינות',
+      'הפרדה בין העניין האישי למקצועי',
+      'שימור תקשורת מכובדת עם הצד השני',
+      'הפחתת מתחים ולחצים',
+      'מיקוד בפתרון ולא בהנצחת הסכסוך'
+    ],
+    conclusion: 'במשרדנו תזכו לייצוג מקצועי שמבוסס על ניסיון, ידע, הקשבה אמיתית ואחריות עמוקה לתוצאה.'
+  };
+
+  const principlesEn = {
+    title: 'Firm Guiding Principles',
+    intro: 'At Yafit Shimon-Touati Law Office, we believe that law is not just about rules - it\'s about people. Every case and every contract comes with real-life emotions, pressures, and hopes.',
+    values: [
+      'Unyielding defense of client rights',
+      'Thorough preparation & strategic precision',
+      'Integrity and honesty',
+      'Separating legal action from personal emotion',
+      'Respectful, assertive communication with opposing parties',
+      'Calm leadership focused on reducing stress',
+      'Resolution-focused approach, not escalation'
+    ],
+    conclusion: 'Our clients receive professional representation backed by experience, legal insight, and a strong sense of accountability for the outcome.'
+  };
+
+  const principlesFr = {
+    title: 'Principes Directeurs du Cabinet',
+    intro: 'Au Cabinet Yafit Shimon-Touati, nous croyons que le droit ne concerne pas seulement les règles - il concerne les gens.',
+    values: [
+      'Défense inflexible des droits des clients',
+      'Préparation approfondie et précision stratégique',
+      'Intégrité et honnêteté',
+      'Séparation de l\'action juridique de l\'émotion personnelle',
+      'Communication respectueuse et assertive avec les parties adverses',
+      'Leadership calme axé sur la réduction du stress',
+      'Approche axée sur la résolution, pas l\'escalade'
+    ],
+    conclusion: 'Nos clients reçoivent une représentation professionnelle soutenue par l\'expérience, la perspicacité juridique et un fort sens de responsabilité pour le résultat.'
+  };
+
+  const content = language === 'he' ? contentHe : language === 'en' ? contentEn : contentFr;
+  const philosophy = language === 'he' ? philosophyHe : language === 'en' ? philosophyEn : philosophyFr;
+  const principles = language === 'he' ? principlesHe : language === 'en' ? principlesEn : principlesFr;
+
+  return (
+    <div className="min-h-screen">
+      <Header />
+      <main>
+        {/* Skip to content link for accessibility */}
+        <a 
+          href="#about" 
+          className="sr-only focus:not-sr-only focus:absolute focus:top-20 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent focus:text-white focus:rounded-lg"
+        >
+          {language === 'he' ? 'דלג לתוכן' : language === 'en' ? 'Skip to content' : 'Passer au contenu'}
+        </a>
+
+        <Hero />
+        
+        {/* About Section */}
+        <section id="about" className="py-24 bg-gradient-subtle">
+          <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+            <div className={`mb-16 animate-fade-in-up ${dir === 'rtl' ? 'text-right' : 'text-left'}`}>
+              <div className="inline-block mb-6">
+                <div className="divider-gold"></div>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-4">
+                {content.title}
+              </h2>
+            </div>
+
+            <div className={`flex flex-col ${dir === 'rtl' ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 items-start`}>
+              <div className={`space-y-6 flex-1 ${dir === 'rtl' ? 'text-right' : 'text-left'}`}>
+                <Collapsible open={isExpanded} onOpenChange={setIsExpanded}>
+                  <div className="prose prose-xl max-w-none">
+                    {content.mainText.split('\n\n').map((paragraph, index) => (
+                      <p key={index} className="text-muted-foreground leading-relaxed mb-6 text-base lg:text-lg">
+                        {paragraph}
+                      </p>
+                    ))}
+                    
+                    <CollapsibleContent className="space-y-6">
+                      {content.fullText.split('\n\n').map((paragraph, index) => (
+                        <p key={index} className="text-muted-foreground leading-relaxed mb-6 text-base lg:text-lg">
+                          {paragraph}
+                        </p>
+                      ))}
+                      
+                      {/* Practice Areas in Expandable Section */}
+                      <div className="mt-12 pt-12 border-t-2 border-accent/10">
+                        <h3 className="text-2xl lg:text-3xl font-heading font-bold text-primary mb-8">
+                          {content.practiceTitle}
+                        </h3>
+                        <div className={`grid gap-3 ${dir === 'rtl' ? 'text-right' : 'text-left'}`}>
+                          {content.practiceAreas.map((area, index) => (
+                            <div key={index} className="flex items-center gap-3 text-muted-foreground text-base lg:text-lg">
+                              <span className="text-accent">•</span>
+                              <span>{area.title}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </CollapsibleContent>
+                  </div>
+                  
+                  <CollapsibleTrigger asChild>
+                    <button className={`mt-8 inline-flex items-center gap-3 px-8 py-4 rounded-xl border-2 border-accent/30 text-accent hover:bg-accent hover:text-white hover:border-accent transition-all duration-300 font-semibold shadow-sm hover:shadow-gold ${dir === 'rtl' ? 'flex-row-reverse' : ''}`}>
+                      <span>{isExpanded ? (language === 'he' ? 'הצג פחות' : language === 'en' ? 'Show less' : 'Voir moins') : (language === 'he' ? 'קרא/י עוד' : language === 'en' ? 'Read more' : 'Lire plus')}</span>
+                      <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+                    </button>
+                  </CollapsibleTrigger>
+                </Collapsible>
+              </div>
+
+              <div className="lg:w-72 flex-shrink-0">
+                <div className="relative group sticky top-8">
+                  <div className="absolute -inset-4 bg-gradient-accent opacity-0 group-hover:opacity-20 rounded-3xl blur-2xl transition-opacity duration-500"></div>
+                  <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-elegant border border-accent/10 bg-white">
+                    <img
+                      src={yafitPortrait}
+                      alt="Attorney Yafit Shimon Touati - Professional Portrait"
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Philosophy Section */}
+        <section id="philosophy" className="py-24 bg-background">
+          <div className="container mx-auto px-6 lg:px-12 max-w-5xl">
+            <div className="mb-12 text-center animate-fade-in-up">
+              <div className="inline-block mb-6">
+                <div className="divider-gold mx-auto"></div>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-4">
+                {philosophy.title}
+              </h2>
+              <p className="text-xl md:text-2xl text-muted-foreground font-light">
+                {philosophy.subtitle}
+              </p>
+            </div>
+
+            <div className={`space-y-6 mb-16 ${dir === 'rtl' ? 'text-right' : 'text-left'}`}>
+              <p className="text-muted-foreground leading-relaxed text-base lg:text-lg">
+                {philosophy.intro}
+              </p>
+            </div>
+
+            <div className={`mb-16 ${dir === 'rtl' ? 'text-right' : 'text-left'}`}>
+              <div className="grid md:grid-cols-2 gap-6">
+                {philosophy.principles.map((principle, index) => (
+                  <div key={index} className="bg-card rounded-xl p-6 border border-accent/20 shadow-sm hover:shadow-elegant transition-all duration-300 hover:border-accent/40">
+                    <h3 className="text-lg font-heading font-bold text-primary mb-2 flex items-start gap-3">
+                      <span className="text-accent">{index + 1}.</span>
+                      <span>{principle.title}</span>
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed text-base">
+                      {principle.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className={`bg-highlight border-2 border-accent/20 rounded-2xl p-8 lg:p-12 ${dir === 'rtl' ? 'text-right' : 'text-left'}`}>
+              <p className="text-muted-foreground leading-relaxed text-lg lg:text-xl font-semibold">
+                {philosophy.conclusion}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Firm Principles Section */}
+        <section id="firm-principles" className="py-24 bg-gradient-subtle">
+          <div className="container mx-auto px-6 lg:px-12 max-w-5xl">
+            <div className="mb-12 text-center animate-fade-in-up">
+              <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-4">
+                {principles.title}
+              </h2>
+              <div className="inline-block my-6">
+                <div className="h-1 w-24 bg-accent mx-auto rounded-full"></div>
+              </div>
+            </div>
+
+            <div className={`space-y-6 mb-16 ${dir === 'rtl' ? 'text-right' : 'text-left'}`}>
+              <p className="text-muted-foreground leading-relaxed text-base lg:text-lg">
+                {principles.intro}
+              </p>
+            </div>
+
+            <div className={`mb-16 ${dir === 'rtl' ? 'text-right' : 'text-left'}`}>
+              <div className="space-y-4">
+                {principles.values.map((value, index) => (
+                  <div 
+                    key={index} 
+                    className="flex items-start gap-4 p-5 bg-card rounded-xl border border-accent/10 hover:border-accent/30 hover:shadow-sm transition-all duration-300"
+                  >
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center">
+                      <span className="text-accent font-bold">•</span>
+                    </div>
+                    <p className="text-muted-foreground text-base lg:text-lg pt-1">
+                      {value}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className={`bg-highlight border-2 border-accent/20 rounded-2xl p-8 lg:p-12 text-center`}>
+              <p className={`text-muted-foreground leading-relaxed text-lg lg:text-xl font-semibold ${dir === 'rtl' ? 'text-right' : 'text-left'}`}>
+                {principles.conclusion}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <PracticeAreasPreview />
+        <ContactForm />
+      </main>
+      <Footer />
+      <WhatsAppButton />
+      <AccessibilityWidget />
+    </div>
+  );
+};
+
+export default Index;

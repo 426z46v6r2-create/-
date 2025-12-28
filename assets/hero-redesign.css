@@ -1,0 +1,31 @@
+/* Google Fonts Import Link to be added in index.html */
+/* https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@600;700&family=Open+Sans:wght@400&family=Rubik:wght@300;400;600;700&family=Source+Sans+Pro:wght@400&display=swap */
+
+/* Font Families */
+.font-rubik {
+    font-family: 'Rubik', sans-serif !important;
+}
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.font-inter {
+    font-family: 'Inter', sans-serif !important;
+}
+
+.font-source-sans {
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+.font-open-sans {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+/* Hero Section Adjustments */
+
+
+.hero-content-spacing {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}

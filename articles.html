@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>מאמרים ופרסומים | יפית שמעון טואטי – משרד עורכי דין</title>
+    <meta name="description"
+        content="מאמרים, ניתוחים ופרסומים מקצועיים בנושאי חוזים, נדל״ן, חברות, צוואות, ירושות וייפוי כוח מתמשך מאת עו״ד יפית שמעון טואטי." />
+    <meta name="author" content="Yafit Shimon Touati Law Office" />
+
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="canonical" href="https://www.yafit-law.com/articles.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Reuse existing stylesheets -->
+    <link rel="stylesheet" crossorigin href="./assets/index-BVrhfsOn.css">
+    <link rel="stylesheet" href="./assets/phone-ltr.css">
+
+    <style>
+        /* Articles-specific styles */
+        .articles-hero {
+            background: linear-gradient(135deg, hsl(215 75% 16%) 0%, hsl(215 50% 25%) 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .articles-intro {
+            max-width: 48rem;
+            margin: 0 auto 2rem;
+            font-size: 1.125rem;
+            line-height: 1.75;
+            opacity: 0.95;
+        }
+
+        .filter-section {
+            background: hsl(var(--muted));
+            padding: 2rem;
+            border-radius: var(--radius);
+            margin-bottom: 3rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.625rem 1.25rem;
+            border: 1.5px solid hsl(var(--border));
+            background: white;
+            border-radius: calc(var(--radius) - 2px);
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            color: hsl(var(--foreground));
+        }
+
+        .filter-btn:hover {
+            border-color: hsl(var(--accent));
+            background: hsl(var(--accent) / 0.05);
+            color: hsl(var(--accent));
+        }
+
+        .filter-btn.active {
+            background: hsl(var(--accent));
+            border-color: hsl(var(--accent));
+            color: white;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .articles-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .article-card {
+            background: white;
+            border: 1px solid hsl(var(--border));
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: var(--shadow-elegant);
+            border-color: hsl(var(--accent) / 0.3);
+        }
+
+        .article-card-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: hsl(var(--muted-foreground));
+        }
+
+        .article-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: hsl(var(--accent) / 0.1);
+            color: hsl(var(--accent));
+            border-radius: calc(var(--radius) - 4px);
+            font-weight: 500;
+            font-size: 0.75rem;
+        }
+
+        .article-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+            color: hsl(var(--foreground));
+        }
+
+        .article-excerpt {
+            color: hsl(var(--muted-foreground));
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .article-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: hsl(var(--accent));
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .article-link:hover {
+            gap: 0.75rem;
+        }
+
+        .back-to-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: hsl(var(--primary));
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-weight: 500;
+            transition: all 0.3s;
+            margin-bottom: 2rem;
+        }
+
+        .back-to-home:hover {
+            background: hsl(var(--primary) / 0.9);
+            transform: translateX(-0.25rem);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: hsl(var(--muted-foreground));
+        }
+
+        .no-results h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: hsl(var(--foreground));
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mx-auto px-4 py-8">
+        <a href="./index.html" class="back-to-home">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            חזרה לדף הבית
+        </a>
+
+        <div class="articles-hero">
+            <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl mb-4">מאמרים ופרסומים</h1>
+            <p class="articles-intro">
+                במרכז העשייה המשפטית של המשרד עומדת המחויבות לידע עדכני, חשיבה אסטרטגית ותובנות מעשיות ללקוחות.
+                כאן מרוכזים מאמרים, ניתוחים ופרסומים מקצועיים בנושאי חוזים, נדל"ן, חברות, צוואות, ירושות וייפוי כוח
+                מתמשך – בגובה העיניים, אך עם עומק משפטי.
+            </p>
+        </div>
+
+        <div class="max-w-7xl mx-auto mt-12">
+            <div class="filter-section">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">כל המאמרים</button>
+                    <button class="filter-btn" data-category="contracts">דיני חוזים</button>
+                    <button class="filter-btn" data-category="realestate">נדל״ן ומקרקעין</button>
+                    <button class="filter-btn" data-category="corporate">חברות וסטארט-אפים</button>
+                    <button class="filter-btn" data-category="wills">צוואות וירושות</button>
+                    <button class="filter-btn" data-category="poa">ייפוי כוח מתמשך</button>
+                    <button class="filter-btn" data-category="litigation">ליטיגציה מסחרית</button>
+                    <button class="filter-btn" data-category="updates">עדכוני פסיקה וחקיקה</button>
+                </div>
+            </div>
+
+            <div class="articles-grid" id="articlesGrid">
+                <!-- Articles will be populated by JavaScript -->
+            </div>
+
+            <div class="no-results hidden" id="noResults">
+                <h3>לא נמצאו מאמרים</h3>
+                <p>נסה לבחור קטגוריה אחרת או חזור לכל המאמרים</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample articles data - replace with actual content
+        const articles = [
+            {
+                id: 1,
+                title: "הסכמי שיתוף פעולה בין חברות הייטק: נקודות מפתח לבחינה",
+                excerpt: "ניתוח מעמיק של הסכמי שיתוף פעולה בין חברות טכנולוגיה, עם דגש על הגנה על קניין רוחני, חלוקת רווחים ומנגנוני יציאה.",
+                category: "corporate",
+                categoryLabel: "חברות וסטארט-אפים",
+                date: "2024-12-15",
+                dateLabel: "15 בדצמבר 2024"
+            },
+            {
+                id: 2,
+                title: "רכישת דירה מקבלן: זכויות הרוכש והגנות משפטיות",
+                excerpt: "מדריך מקיף לרוכשי דירות מקבלנים, כולל סקירת זכויות לפי חוק המכר והגנות בפני עיכובים ופגמים.",
+                category: "realestate",
+                categoryLabel: "נדל״ן ומקרקעין",
+                date: "2024-12-10",
+                dateLabel: "10 בדצמבר 2024"
+            },
+            {
+                id: 3,
+                title: "ייפוי כוח מתמשך: מתי כדאי לערוך ומה חשוב לדעת",
+                excerpt: "הסבר מפורט על ייפוי כוח מתמשך, מתי מומלץ לערוך אותו, ההבדלים בין סוגי הייפויים והשלכות משפטיות.",
+                category: "poa",
+                categoryLabel: "ייפוי כוח מתמשך",
+                date: "2024-12-05",
+                dateLabel: "5 בדצמבר 2024"
+            },
+            {
+                id: 4,
+                title: "צוואה או ירושה חוקית: מה עדיף ולמה?",
+                excerpt: "השוואה מקיפה בין צוואה לירושה חוקית, יתרונות וחסרונות של כל אפשרות, והמלצות מעשיות למצבים שונים.",
+                category: "wills",
+                categoryLabel: "צוואות וירושות",
+                date: "2024-11-28",
+                dateLabel: "28 בנובמבר 2024"
+            },
+            {
+                id: 5,
+                title: "הפרת חוזה: סעדים זמינים ואסטרטגיות משפטיות",
+                excerpt: "סקירה של הסעדים המשפטיים הזמינים במקרה של הפרת חוזה, כולל פיצויים, ביצוע בעין ומניעה.",
+                category: "contracts",
+                categoryLabel: "דיני חוזים",
+                date: "2024-11-20",
+                dateLabel: "20 בנובמבר 2024"
+            },
+            {
+                id: 6,
+                title: "עדכון: פסק דין חדש בנושא אחריות דירקטורים",
+                excerpt: "ניתוח פסק דין עליון חדש שקובע תקדים חשוב בנושא אחריות אישית של דירקטורים בחברות בע״מ.",
+                category: "updates",
+                categoryLabel: "עדכוני פסיקה וחקיקה",
+                date: "2024-11-15",
+                dateLabel: "15 בנובמבר 2024"
+            }
+        ];
+
+        const articlesGrid = document.getElementById('articlesGrid');
+        const noResults = document.getElementById('noResults');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+
+        function renderArticles(category = 'all') {
+            const filtered = category === 'all'
+                ? articles
+                : articles.filter(article => article.category === category);
+
+            if (filtered.length === 0) {
+                articlesGrid.classList.add('hidden');
+                noResults.classList.remove('hidden');
+                return;
+            }
+
+            articlesGrid.classList.remove('hidden');
+            noResults.classList.add('hidden');
+
+            articlesGrid.innerHTML = filtered.map(article => `
+                <article class="article-card">
+                    <div class="article-card-content">
+                        <div class="article-meta">
+                            <span class="article-tag">${article.categoryLabel}</span>
+                            <span>•</span>
+                            <time datetime="${article.date}">${article.dateLabel}</time>
+                        </div>
+                        <h2 class="article-title">${article.title}</h2>
+                        <p class="article-excerpt">${article.excerpt}</p>
+                        <a href="article.html?id=${article.id}" class="article-link">
+                            קרא עוד
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const category = button.dataset.category;
+                renderArticles(category);
+            });
+        });
+
+        // Initial render
+        renderArticles();
+    </script>
+</body>
+
+</html>

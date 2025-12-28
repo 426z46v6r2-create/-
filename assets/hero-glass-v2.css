@@ -1,0 +1,128 @@
+/* Hero CSS - Revert to Stable 2-Line Layout */
+
+:root {
+    --hero-bg-image: url('./hero-meeting-room.jpg');
+}
+
+.hero-glass-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    background-image: var(--hero-bg-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-glass-overlay {
+    position: absolute;
+    inset: 0;
+    display: block;
+    background: linear-gradient(135deg, rgba(15, 30, 50, 0.65) 0%, rgba(15, 30, 50, 0.85) 100%);
+    z-index: 1;
+}
+
+.hero-glass-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.glass-card {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* RTL Alignment */
+[dir="rtl"] .hero-glass-container,
+html[dir="rtl"] .hero-glass-container,
+html[dir="rtl"] .glass-card {
+    align-items: flex-start;
+    text-align: right;
+}
+
+/* Typography Hierarchy */
+
+.glass-h1 {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 1.2;
+    color: #ffffff;
+    margin: 0;
+    display: block;
+    white-space: nowrap;
+}
+
+.glass-subtitle {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #ffffff;
+    margin: 0;
+    white-space: normal;
+}
+
+/* Button */
+.glass-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 42px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: fit-content;
+    margin-top: 24px;
+}
+
+.glass-btn:hover {
+    background-color: #d4af37;
+    border-color: #d4af37;
+    color: #0f1e32;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .glass-h1 {
+        font-size: 28px;
+        white-space: normal;
+        line-height: 1.3;
+    }
+
+    .hero-glass-container {
+        padding: 0 24px;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .glass-card {
+        align-items: center !important;
+        text-align: center !important;
+    }
+}

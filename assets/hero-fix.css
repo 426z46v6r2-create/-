@@ -1,0 +1,78 @@
+/* assets/hero-fix.css */
+
+#hero {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    background-image: url('/assets/hero-meeting-room.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+
+#hero::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(15, 30, 50, 0.6) !important;
+    z-index: 1 !important;
+}
+
+#hero>div {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Force container to center text based on language direction */
+[dir="rtl"] #hero>div {
+    align-items: flex-start !important;
+    text-align: right !important;
+}
+
+[dir="ltr"] #hero>div {
+    align-items: flex-start !important;
+    text-align: left !important;
+}
+
+/* Hide the existing side image - assuming it is the second child or has certain classes */
+#hero img {
+    display: none !important;
+}
+
+#hero h1 {
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    color: white !important;
+    margin: 0 !important;
+}
+
+#hero h2 {
+    font-weight: 400 !important;
+    margin-top: 15px !important;
+    color: white !important;
+}
+
+#hero p {
+    font-weight: 300 !important;
+    font-size: 0.9em !important;
+    margin-top: 10px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    max-width: none !important;
+}
+
+#hero button,
+#hero .cta-button {
+    margin-top: 50px !important;
+}

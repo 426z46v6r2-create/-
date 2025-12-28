@@ -1,0 +1,15 @@
+# System files
+.DS_Store
+.Trash
+*.bak
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*~

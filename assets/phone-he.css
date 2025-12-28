@@ -1,0 +1,5 @@
+.phone-he {
+    direction: ltr !important;
+    unicode-bidi: bidi-override !important;
+    display: inline-block;
+}

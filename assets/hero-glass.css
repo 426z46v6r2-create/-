@@ -1,0 +1,126 @@
+/* Hero Glassmorphism Redesign CSS */
+
+/* Fonts */
+.font-heebo {
+    font-family: 'Heebo', sans-serif !important;
+}
+
+.font-inter {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Background & Layout */
+.hero-glass-section {
+    position: relative;
+    /* Background Image will be set inline using o2 variable */
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    /* Fixed might cause mobile issues, stick to scroll/default */
+    overflow: hidden;
+    width: 100%;
+    /* min-height handled in component className (100vh) */
+}
+
+/* Dark Overlay with Gradient */
+.hero-glass-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(15, 30, 50, 0.5) 0%, rgba(15, 30, 50, 0.7) 100%);
+    z-index: 1;
+}
+
+.hero-glass-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    /* Flexbox handled in component for centering/positioning */
+}
+
+/* Glass Card Style */
+.glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    /* 8% opacity */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 48px 56px;
+    max-width: 650px;
+    width: 100%;
+    box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* Spacing between elements */
+}
+
+/* Typography Defaults */
+.hero-title-name {
+    color: #ffffff;
+    font-size: 56px;
+    line-height: 1.1;
+}
+
+.hero-subtitle-firm {
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 1.4;
+    opacity: 0.95;
+}
+
+.hero-desc-experience {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-top: 8px;
+    /* Extra space before this line */
+}
+
+/* CTA Button */
+.glass-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 12px 32px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 24px;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.glass-cta-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .glass-card {
+        padding: 32px 24px;
+        backdrop-filter: blur(8px);
+        /* Less blur for performance/visibility */
+    }
+
+    .hero-title-name {
+        font-size: 40px;
+    }
+
+    .hero-subtitle-firm {
+        font-size: 18px;
+    }
+
+    .hero-desc-experience {
+        font-size: 15px;
+    }
+}
