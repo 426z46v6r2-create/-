@@ -11,7 +11,8 @@
     <meta name="keywords"
         content="עורך דין, משרד עורכי דין, יפית שמעון טואטי, נתניה, הרצליה, דיני חוזים, נדל״ן, צוואות, ירושות, ייפוי כוח, ייעוץ עסקי" />
 
-    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
     <link rel="canonical" href="https://www.yafit-law.com/" />
 
     <link rel="alternate" hreflang="he" href="https://www.yafit-law.com/" />
@@ -19,14 +20,9 @@
     <link rel="alternate" hreflang="fr" href="https://www.yafit-law.com/" />
     <link rel="alternate" hreflang="x-default" href="https://www.yafit-law.com/" />
 
-    <!-- FORCED RUBIK LINK -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Inter:wght@400;700&family=Lato:wght@300;400;700&family=Montserrat:wght@600;700&family=Open+Sans:wght@400&family=Playfair+Display:wght@600;700&family=Rubik:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -44,10 +40,59 @@
     <link rel="stylesheet" crossorigin href="./assets/index-BVrhfsOn.css">
     <link rel="stylesheet" href="./assets/hero-fix.css">
     <link rel="stylesheet" href="./assets/phone-he.css">
+    <link rel="stylesheet" href="./assets/mobile-perfection.css">
+    <script src="./assets/footer-fix.js"></script>
 </head>
 
 <body>
     <div id="root"></div>
+
+
+
+    <script src="./assets/cookie-consent.js"></script>
+    <script>
+        // Hero H1 Line Break Management - REMOVED (Fixed in CSS)
+    </script>
+
+            <script>
+        // Session storage scroll logic for React SPA
+        window.addEventListener('load', () => {
+            const targetId = sessionStorage.getItem('scrollTarget');
+            if (targetId) {
+                sessionStorage.removeItem('scrollTarget');
+                
+                const scrollToSection = (id) => {
+                    const el = document.getElementById(id);
+                    if (el) {
+                        const top = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                        window.scrollTo({ top, behavior: "smooth" });
+                        return true;
+                    }
+                    return false;
+                };
+
+                // Try immediately
+                if (!scrollToSection(targetId)) {
+                    // Set up MutationObserver to wait for the element
+                    const observer = new MutationObserver((mutations, obs) => {
+                        if (scrollToSection(targetId)) {
+                            obs.disconnect();
+                        }
+                    });
+                    
+                    observer.observe(document.body, {
+                        childList: true,
+                        subtree: true
+                    });
+                    
+                    // Failsafe: stop observing after 5 seconds
+                    setTimeout(() => {
+                        observer.disconnect();
+                    }, 5000);
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

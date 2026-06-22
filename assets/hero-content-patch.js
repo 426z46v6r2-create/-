@@ -2,19 +2,25 @@
 (function () {
     const CONTENT = {
         he: {
-            title: "יפית שמעון טואטי - משרד עורכי דין",
-            subtitle: "מעל 16 שנות מומחיות בחוזים, נדל״ן וירושה בגישה אנושית ונחושה",
+            name: "יפית שמעון טואטי",
+            title: "משרד עורכי דין",
+            tagline: "מקצועיות, אנושיות, נחישות",
+            subtitle: "מעל 16 שנות ניסיון בחוזים, נדל״ן, חברות וירושה בגישה אנושית ונחושה",
             cta: "צור קשר",
             fontClass: "font-rubik"
         },
         en: {
-            title: "Yafit Shimon Touati - Law Office",
+            name: "Yafit Shimon Touati",
+            title: "Law Office",
+            tagline: "Professionalism, Humanity, Determination",
             subtitle: "16+ years of expertise in contracts, real estate, and inheritance – a human approach with professional determination",
             cta: "Contact Us",
             fontClass: "font-montserrat"
         },
         fr: {
-            title: "Yafit Shimon Touati - Cabinet d'Avocats",
+            name: "Yafit Shimon Touati",
+            title: "Cabinet d'Avocats",
+            tagline: "Professionnalisme, Humanité, Détermination",
             subtitle: "Plus de 16 ans d'expertise en contrats, immobilier et successions – une approche humaine avec une détermination professionnelle",
             cta: "Nous Contacter",
             fontClass: "font-montserrat"
@@ -33,8 +39,9 @@
         wrapper.id = 'hero-glass-patch';
 
         const overlay = document.createElement('div');
-        overlay.className = 'hero-glass-overlay';
         wrapper.appendChild(overlay);
+        // Note: glass-overlay is now CSS ::before or separate div, keeping consistent with existing CSS which expects .hero-glass-overlay
+        overlay.className = 'hero-glass-overlay';
 
         const container = document.createElement('div');
         container.className = 'hero-glass-container';
@@ -42,10 +49,22 @@
         const card = document.createElement('div');
         card.className = `glass-card ${data.fontClass}`;
 
+        // Create Name Element (Line 1)
+        const nameEl = document.createElement('div');
+        nameEl.className = 'glass-name';
+        nameEl.textContent = data.name;
+
+        // Create Title Element (Line 2 - Main Heading)
         const h1 = document.createElement('h1');
         h1.className = `glass-h1`;
         h1.textContent = data.title;
 
+        // Create Tagline Element (Line 3 - New)
+        const tagline = document.createElement('div');
+        tagline.className = 'glass-tagline';
+        tagline.textContent = data.tagline;
+
+        // Create Description Element (Line 4 - Subtitle)
         const p = document.createElement('p');
         p.className = `glass-subtitle`;
         p.textContent = data.subtitle;
@@ -55,7 +74,9 @@
         btn.className = `glass-btn`;
         btn.textContent = data.cta;
 
+        card.appendChild(nameEl);
         card.appendChild(h1);
+        card.appendChild(tagline);
         card.appendChild(p);
         card.appendChild(btn);
 

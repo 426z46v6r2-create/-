@@ -2,6 +2,21 @@
 .DS_Store
 .Trash
 *.bak
+*.bak.*
+*.backup
+
+# Build archives
+*.zip
+
+# Snapshot / versioned directories (use git tags instead)
+GOLDEN_MASTER_*/
+PRODUCTION_v*/
+CLEAN_FINAL_SITE*/
+FINAL_CLEAN_SITE*/
+cloudflare-snapshot-*/
+cloudflare_ready/
+Homepage - Pre Mobile Hero Update/
+dist/
 
 # IDE files
 .vscode/

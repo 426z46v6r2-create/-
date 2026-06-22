@@ -1,0 +1,353 @@
+/* assets/mobile-perfection.css */
+
+@media (max-width: 768px) {
+
+    /* 0. Mobile Standards Base */
+    body {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        /* Compensate for fixed header height so page content is not hidden behind it */
+        padding-top: 120px !important;
+    }
+
+    /* 1. Fixed Header for Mobile - keeps hamburger always visible during scroll */
+    body header,
+    #root header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        background: #0F1E32 !important;
+        background-color: #0F1E32 !important;
+        border: none !important;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.35) !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        z-index: 9999 !important;
+    }
+
+    /* Ensure elements are visible against dark overlay */
+    body header button,
+    body header a,
+    body header svg,
+    #root header button,
+    #root header svg {
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        fill: #ffffff !important;
+    }
+
+    /* Header layout - 2 Rows: Logo+Lang on row 1, Nav on row 2 */
+    body header .container > .flex,
+    body header .container.flex {
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        padding-bottom: 0 !important;
+        height: auto !important;
+    }
+
+    /* Logo container */
+    body header .container > .flex > button:first-child,
+    body header .container.flex > a:first-child {
+        flex: 1 1 auto !important;
+        justify-content: flex-start !important;
+        padding: 0 !important;
+        display: flex !important;
+    }
+    
+    body header .container > .flex > button:first-child img,
+    body header .container.flex > a:first-child img {
+        height: 48px !important;
+        width: auto !important;
+    }
+
+    /* Language Switcher Container */
+    body header .container > .flex > div.hidden.md\:flex,
+    body header .container.flex > div.flex.items-center.gap-4 {
+        display: flex !important;
+        flex: 0 0 auto !important;
+        justify-content: flex-end !important;
+        margin-left: 0 !important; /* LTR right, RTL left */
+    }
+
+    /* Remove bulky background from inner language wrapper */
+    body header .container > .flex > div.hidden.md\:flex > div,
+    body header .container.flex > div.flex.items-center.gap-4 > div.hidden.md\:flex {
+        display: flex !important;
+        align-items: center !important;
+        background: transparent !important;
+        padding: 0 !important;
+        gap: 4px !important;
+    }
+
+    [dir="ltr"] body header .container > .flex > div.hidden.md\:flex,
+    [dir="ltr"] body header .container.flex > div.flex.items-center.gap-4 {
+        margin-right: 0 !important;
+    }
+
+    /* Language Switcher internal buttons */
+    body header .container > .flex > div.hidden.md\:flex button,
+    body header .container.flex > div.flex.items-center.gap-4 > div.hidden.md\:flex a {
+        color: rgba(255, 255, 255, 0.7) !important;
+        font-size: 11px !important;
+        padding: 4px 6px !important;
+        min-height: 26px !important;
+        height: 26px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        text-decoration: none !important;
+        border-radius: 4px !important;
+        line-height: 1 !important;
+    }
+
+    /* Active Language */
+    body header .container > .flex > div.hidden.md\:flex button.bg-accent,
+    body header .container.flex > div.flex.items-center.gap-4 > div.hidden.md\:flex a.bg-background {
+        background-color: #D4AF37 !important;
+        color: #ffffff !important;
+        font-weight: bold !important;
+    }
+
+    /* Scrollable Desktop Nav */
+    body header nav.hidden.md\:flex,
+    body header .container.flex > nav.hidden.md\:flex {
+        display: flex !important;
+        width: 100% !important;
+        order: 3 !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 20px !important;
+        padding: 8px 0 4px 0 !important;
+        margin-top: 8px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+        scrollbar-width: none !important;
+    }
+
+    body header nav.hidden.md\:flex::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    /* Nav Links */
+    body header nav.hidden.md\:flex button,
+    body header nav.hidden.md\:flex a {
+        font-size: 14px !important;
+        min-height: 44px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        padding: 0 4px !important;
+        flex-shrink: 0 !important;
+        color: #ffffff !important;
+        opacity: 0.9 !important;
+        text-transform: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+    }
+
+    /* Active Nav Link */
+    body header nav.hidden.md\:flex button.text-accent,
+    body header nav.hidden.md\:flex a.text-accent {
+        color: #D4AF37 !important;
+        font-weight: 700 !important;
+        opacity: 1 !important;
+        border-bottom: 2px solid #D4AF37 !important;
+    }
+
+    /* Hide Hamburger button and mobile dropdown */
+    body header button[aria-label="Toggle menu"],
+    body header nav.md\:hidden,
+    body header #mobileMenuBtn,
+    body header #mobileMenu {
+        display: none !important;
+    }
+
+    /* 2. Full Screen Hero Section */
+    #hero {
+        height: auto !important;
+        min-height: 50vh !important;
+        /* Image: unnamed.jpg is in assets folder, so url('unnamed.jpg') is correct relative to this css file */
+        background-image: url('unnamed.jpg') !important;
+        background-size: contain !important;
+        background-position: top center !important;
+        background-repeat: no-repeat !important;
+        background-color: #0F1E32 !important;
+        /* Fallback */
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        position: relative !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+
+    /* Dark Blue Overlay */
+    #hero::before {
+        content: '' !important;
+        display: block !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        /* Dark blue overlay #0F1E32 with opacity */
+        background: rgba(15, 30, 50, 0.75) !important;
+        z-index: 1 !important;
+    }
+
+    /* Hero Content Center - Specificity Boost */
+    body #hero>div,
+    #root #hero>div,
+    [dir="rtl"] #hero>div {
+        position: relative !important;
+        z-index: 2 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 24px !important;
+        margin: 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+
+        /* Remove any box styling */
+        background: transparent !important;
+        backdrop-filter: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Typography Match - Alignment Force */
+    body #hero h1,
+    #root #hero h1,
+    [dir="rtl"] #hero h1 {
+        color: #ffffff !important;
+        font-size: 36px !important;
+        font-weight: 700 !important;
+        line-height: 1.2 !important;
+        margin-bottom: 16px !important;
+        text-shadow: none !important;
+        white-space: normal !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    body #hero h2,
+    #root #hero h2,
+    [dir="rtl"] #hero h2 {
+        color: #ffffff !important;
+        font-size: 18px !important;
+        font-weight: 400 !important;
+        line-height: 1.5 !important;
+        margin-bottom: 0 !important;
+        text-shadow: none !important;
+        opacity: 0.95 !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    /* Show the subtitle paragraph in hero on mobile */
+    #hero p {
+        display: block !important;
+        color: rgba(255, 255, 255, 0.9) !important;
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        text-align: center !important;
+        margin-top: 8px !important;
+        padding: 0 8px !important;
+        white-space: normal !important;
+    }
+
+    /* Hide any desktop decorations */
+    #hero img {
+        display: none !important;
+    }
+
+    /* 3. Global Adjustments (Keep existing necessary fixes) */
+
+    /* Fix sections padding */
+    section {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    /* Button Corrections from previous state */
+    button::after {
+        content: none !important;
+    }
+
+    /* About Image Fixes (Preserved) */
+    .about-hero img,
+    #about img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 16px !important;
+    }
+
+    /* Fix Profile Photo Cropping */
+    .about-hero img,
+    #about img {
+        object-position: center 20% !important;
+    }
+
+    /* Fix Logo Visibility */
+    /* Ensure logo is visible even if hero images are hidden */
+    .hero .logo,
+    .site-logo,
+    #hero img[class*="logo"],
+    #hero img[src*="logo"] {
+        display: block !important;
+        visibility: visible !important;
+        max-width: 180px !important;
+        margin: 0 auto 1rem !important;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .quick-actions {
+        display: none !important;
+    }
+}
+
+/* --- 5. Global Arrow Removal (Force Clean Buttons) --- */
+/* Remove arrow from CTA buttons */
+#hero button::after,
+#hero .cta-button::after,
+section button::after,
+section .cta-button::after,
+#contact button::after,
+.btn::after,
+.cta::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* If arrow is an SVG or span element, hide it */
+#hero button svg,
+#hero .cta-button svg,
+#hero button span[class*="arrow"],
+#hero button span[class*="icon"],
+#hero button i {
+    display: none !important;
+}
+
+/* Ensure button has only text content */
+#hero button,
+#hero .cta-button,
+section button,
+section .cta-button {
+    gap: 0 !important;
+    /* Remove space for icon */
+}

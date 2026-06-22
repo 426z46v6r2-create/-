@@ -384,6 +384,54 @@ Tout au long de sa carrière, Maître Shimon-Touati a continué à approfondir s
         </section>
 
         <PracticeAreasPreview />
+        
+        {/* Professional Articles Section */}
+        <section id="articles" className="py-24 bg-background">
+          <div className="container mx-auto px-6 lg:px-12 max-w-6xl">
+            <div className="mb-12 text-center animate-fade-in-up">
+              <div className="inline-block mb-6">
+                <div className="divider-gold mx-auto"></div>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-4">
+                מאמרים מקצועיים
+              </h2>
+              <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto">
+                קראו את המאמרים המקצועיים שלנו כדי להשיג תובנות מועילות ולשמור על הזכויות שלכם.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8" dir="rtl">
+              {/* Article 1 Card */}
+              <div className="bg-card text-card-foreground rounded-2xl border border-accent/20 shadow-sm hover:shadow-elegant transition-all duration-300 hover:border-accent/40 bg-white/50 backdrop-blur-sm p-8">
+                <h3 className="text-2xl font-bold mb-4 text-primary">למה חשוב לערוך צוואה גם כשאין נכסים רבים?</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  לא מעט אנשים שואלים את עצמם: "אין לי נכסים רבים - אז בשביל מה אני צריך צוואה?"
+                  רבים מניחים שצוואה נחוצה רק כאשר יש מספר דירות, חסכונות משמעותיים או עסק משפחתי.
+                  בפועל, המציאות המשפטית והמשפחתית מוכיחה פעם אחר פעם שעריכת צוואה היא צעד משפטי חשוב.
+                </p>
+                <a href="article-wills.html" className="inline-flex items-center text-primary font-medium hover:underline group">
+                  המשך קריאה
+                  <svg className="mr-2 h-4 w-4 rotate-180 transform group-hover:-translate-x-1 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+
+              {/* Article 2 Card */}
+              <div className="bg-card text-card-foreground rounded-2xl border border-accent/20 shadow-sm hover:shadow-elegant transition-all duration-300 hover:border-accent/40 bg-white/50 backdrop-blur-sm p-8">
+                <h3 className="text-2xl font-bold mb-4 text-primary">בדק דירה מקבלן: למה אסור לוותר על מהנדס מומחה</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  הגיע הרגע לו ייחלתם - מסירת המפתח לדירה החדשה אותה רכשתם במיטב כספכם.
+                  לאחר חודשים ולעיתים שנים של ציפייה, תכנון והמתנה, זהו שלב מרגש במיוחד.
+                  עם זאת, דווקא במעמד זה, תחת ההתרגשות והעומס, אסור לפספס בדיקה יסודית.
+                </p>
+                <a href="article-property-inspection.html" className="inline-flex items-center text-primary font-medium hover:underline group">
+                  המשך קריאה
+                  <svg className="mr-2 h-4 w-4 rotate-180 transform group-hover:-translate-x-1 transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <ContactForm />
       </main>
       <Footer />
