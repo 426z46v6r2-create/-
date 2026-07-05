@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.yst-law.com/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.yst-law.com/"/>
+  </url>
+
+  <!-- Firm Principles -->
+  <url>
+    <loc>https://www.yst-law.com/firm-principles.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.yst-law.com/firm-principles.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.yst-law.com/firm-principles-en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.yst-law.com/firm-principles-fr.html"/>
+  </url>
+  <url>
+    <loc>https://www.yst-law.com/firm-principles-en.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.yst-law.com/firm-principles-fr.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Philosophy -->
+  <url>
+    <loc>https://www.yst-law.com/philosophy.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.yst-law.com/philosophy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.yst-law.com/philosophy-en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.yst-law.com/philosophy-fr.html"/>
+  </url>
+  <url>
+    <loc>https://www.yst-law.com/philosophy-en.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.yst-law.com/philosophy-fr.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Articles -->
+  <url>
+    <loc>https://www.yst-law.com/articles.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.yst-law.com/article-property-inspection.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.yst-law.com/article-wills.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal pages -->
+  <url>
+    <loc>https://www.yst-law.com/privacy-policy.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.yst-law.com/terms-of-use.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.yst-law.com/accessibility-statement.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
