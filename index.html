@@ -95,41 +95,39 @@
     </script>
 
             <script>
-        // Session storage scroll logic for React SPA
-        window.addEventListener('load', () => {
-            const targetId = sessionStorage.getItem('scrollTarget');
-            if (targetId) {
-                sessionStorage.removeItem('scrollTarget');
-                
-                const scrollToSection = (id) => {
-                    const el = document.getElementById(id);
-                    if (el) {
-                        const top = el.getBoundingClientRect().top + window.pageYOffset - 80;
-                        window.scrollTo({ top, behavior: "smooth" });
-                        return true;
-                    }
-                    return false;
-                };
-
-                // Try immediately
-                if (!scrollToSection(targetId)) {
-                    // Set up MutationObserver to wait for the element
-                    const observer = new MutationObserver((mutations, obs) => {
-                        if (scrollToSection(targetId)) {
-                            obs.disconnect();
-                        }
-                    });
-                    
-                    observer.observe(document.body, {
-                        childList: true,
-                        subtree: true
-                    });
-                    
-                    // Failsafe: stop observing after 5 seconds
-                    setTimeout(() => {
-                        observer.disconnect();
-                    }, 5000);
+        // Scroll to section by id, waiting for React to render it
+        function scrollToSectionWhenReady(targetId) {
+            const scrollToSection = (id) => {
+                const el = document.getElementById(id);
+                if (el) {
+                    const top = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                    window.scrollTo({ top, behavior: "smooth" });
+                    return true;
                 }
+                return false;
+            };
+
+            if (!scrollToSection(targetId)) {
+                const observer = new MutationObserver((mutations, obs) => {
+                    if (scrollToSection(targetId)) {
+                        obs.disconnect();
+                    }
+                });
+                observer.observe(document.body, { childList: true, subtree: true });
+                setTimeout(() => observer.disconnect(), 5000);
+            }
+        }
+
+        window.addEventListener('load', () => {
+            // Support both sessionStorage (old nav) and URL hash (new nav with back-button support)
+            const hashTarget = window.location.hash ? window.location.hash.slice(1) : null;
+            const sessionTarget = sessionStorage.getItem('scrollTarget');
+            const targetId = hashTarget || sessionTarget;
+
+            if (sessionTarget) sessionStorage.removeItem('scrollTarget');
+
+            if (targetId) {
+                scrollToSectionWhenReady(targetId);
             }
         });
     </script>
