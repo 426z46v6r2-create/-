@@ -10,7 +10,7 @@
     <meta name="author" content="Yafit Shimon Touati Law Office" />
 
     <link rel="icon" type="image/png" href="./favicon.png" />
-    <link rel="canonical" href="https://www.yafit-law.com/philosophy-fr.html" />
+    <link rel="canonical" href="https://www.yst-law.com/philosophy-fr.html" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -175,8 +175,9 @@
                 <a href="./index.html#practice-areas"
                     class="text-base font-medium text-primary hover:text-accent transition-colors">Domaines
                     d'expertise</a>
-                <a href="./index.html#contact"
-                    class="px-5 py-2.5 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-all shadow-lg shadow-accent/25">Contactez-nous</a>
+                <button onclick="openContactPopup()"
+                    class="px-5 py-2.5 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-all shadow-lg shadow-accent/25"
+                    style="cursor:pointer;border:none;font-family:inherit;font-size:1rem;">Contactez-nous</button>
             </nav>
 
             <!-- Language Switcher & Mobile Menu -->
@@ -213,8 +214,7 @@
                     du Cabinet</a>
                 <a href="./index.html#practice-areas"
                     class="text-lg font-medium text-primary hover:text-accent">Domaines d'expertise</a>
-                <a href="./index.html#contact"
-                    class="text-lg font-medium text-primary hover:text-accent">Contactez-nous</a>
+                <a href="javascript:void(0)" onclick="openContactPopup()" class="text-lg font-medium text-primary hover:text-accent">Contactez-nous</a>
                 <div class="flex justify-center gap-4 mt-4 border-t pt-4">
                     <a href="./philosophy.html" class="text-muted-foreground">HE</a>
                     <a href="./philosophy-en.html" class="text-muted-foreground">EN</a>
@@ -247,10 +247,11 @@
                             stroke-width="2">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        Protection Résolue
+                        Détermination
                     </h3>
                     <p class="principle-desc">
-                        Je défends les intérêts de mes clients avec dévouement.
+                        Je suis déterminée à défendre les intérêts et les droits de mes clients, en choisissant la
+                        voie juridique juste et efficace pour atteindre leurs objectifs.
                     </p>
                 </div>
 
@@ -260,11 +261,12 @@
                             stroke-width="2">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        Précision et Rigueur
+                        Précision et Rigueur comme Clé du Succès
                     </h3>
                     <p class="principle-desc">
-                        Un travail juridique de qualité exige de la précision. Je veille à un examen approfondi de tous
-                        les documents, et à une analyse approfondie des précédents pertinents.
+                        Un travail juridique de qualité exige d'aller dans les détails. Je veille à un examen rigoureux
+                        et une analyse approfondie de la matière, ainsi qu'à une vérification complète du droit et des
+                        précédents pertinents.
                     </p>
                 </div>
 
@@ -274,10 +276,13 @@
                             stroke-width="2">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        Équilibre
+                        Réflexion Stratégique et Vision Large
                     </h3>
                     <p class="principle-desc">
-                        Je sépare les tâches juridiques du conflit personnel.
+                        La représentation juridique optimale ne se limite pas à la question de ce qui peut être fait,
+                        mais aussi de ce qui doit l'être. J'examine la vue d'ensemble, les alternatives et les
+                        implications de chaque démarche, afin de choisir la voie qui sert le mieux les objectifs du
+                        client.
                     </p>
                 </div>
 
@@ -287,10 +292,13 @@
                             stroke-width="2">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        Communication
+                        Objectivité et Humanité
                     </h3>
                     <p class="principle-desc">
-                        Dialogue respectueux et ouvert.
+                        Il n'est pas nécessaire de transformer un différend en combat personnel. Je crois qu'il est
+                        possible de défendre fermement les droits du client tout en maintenant l'objectivité, une
+                        communication respectueuse et des relations constructives avec la partie adverse et ses
+                        représentants.
                     </p>
                 </div>
 
@@ -300,12 +308,12 @@
                             stroke-width="2">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        Apaisement des tensions
+                        Accompagnement Personnel et Attentif
                     </h3>
                     <p class="principle-desc">
-                        Au lieu de perpétuer le conflit et la discorde, je m'efforce de gérer le différend de manière
-                        agréable et respectueuse, mais ferme. Je crois qu'il est possible d'être ferme sur le plan
-                        juridique tout en restant humaine.
+                        Il est important pour moi de comprendre les besoins et les objectifs du client et de
+                        l'accompagner de manière personnelle et attentive, en fournissant des outils et une préparation
+                        pour faire face aux défis et aux pressions liés à la procédure juridique.
                     </p>
                 </div>
 
@@ -315,11 +323,12 @@
                             stroke-width="2">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        Résolution
+                        Orienté Solution
                     </h3>
                     <p class="principle-desc">
-                        Mon objectif est de trouver la solution optimale pour le client. Je recherche des solutions
-                        créatives, efficaces et pratiques.
+                        L'objectif est d'atteindre la meilleure solution pour le client. Je m'efforce de trouver des
+                        solutions créatives, efficaces et pratiques, avec une vision large des besoins du client, de
+                        ses objectifs et des implications de chaque démarche.
                     </p>
                 </div>
             </div>
@@ -337,17 +346,18 @@
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="./index.html#contact"
+                <button onclick="openContactPopup()"
                     class="inline-flex items-center gap-2 px-8 py-3 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-all"
-                    style="text-decoration: none;">
+                    style="cursor: pointer; border: none; font-family: inherit; font-size: 1rem;">
                     Contactez-nous
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
-                </a>
+                </button>
             </div>
         </div>
     </div>
+    <script src="./assets/contact-popup.js"></script>
     <script src="./assets/cookie-consent.js"></script>
     <script>
         // Mobile Menu Toggle

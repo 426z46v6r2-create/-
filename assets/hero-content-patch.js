@@ -5,7 +5,7 @@
             name: "יפית שמעון טואטי",
             title: "משרד עורכי דין",
             tagline: "מקצועיות, אנושיות, נחישות",
-            subtitle: "מעל 16 שנות ניסיון בחוזים, נדל״ן, חברות וירושה בגישה אנושית ונחושה",
+            subtitle: "מעל 17 שנות ניסיון - חשיבה אסטרטגית, דיוק וחתירה לתוצאה.",
             cta: "צור קשר",
             fontClass: "font-rubik"
         },
@@ -13,7 +13,7 @@
             name: "Yafit Shimon Touati",
             title: "Law Office",
             tagline: "Professionalism, Humanity, Determination",
-            subtitle: "16+ years of expertise in contracts, real estate, and inheritance – a human approach with professional determination",
+            subtitle: "17+ years of expertise – strategic thinking, precision and the drive for results.",
             cta: "Contact Us",
             fontClass: "font-montserrat"
         },
@@ -21,7 +21,7 @@
             name: "Yafit Shimon Touati",
             title: "Cabinet d'Avocats",
             tagline: "Professionnalisme, Humanité, Détermination",
-            subtitle: "Plus de 16 ans d'expertise en contrats, immobilier et successions – une approche humaine avec une détermination professionnelle",
+            subtitle: "Plus de 17 ans d'expérience – réflexion stratégique, précision et la volonté d'obtenir des résultats.",
             cta: "Nous Contacter",
             fontClass: "font-montserrat"
         }

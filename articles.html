@@ -10,7 +10,7 @@
     <meta name="author" content="Yafit Shimon Touati Law Office" />
 
     <link rel="icon" type="image/png" href="./favicon.png" />
-    <link rel="canonical" href="https://www.yafit-law.com/articles.html" />
+    <link rel="canonical" href="https://www.yst-law.com/articles.html" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,7 +59,7 @@
                 <a href="javascript:void(0)" onclick="navigateAndScroll('firm-principles')" class="text-sm font-medium transition-colors border-none bg-transparent cursor-pointer text-foreground hover:text-accent">עקרונות המשרד</a>
                 <a href="javascript:void(0)" onclick="navigateAndScroll('practice-areas')" class="text-sm font-medium transition-colors border-none bg-transparent cursor-pointer text-foreground hover:text-accent">תחומי התמחות</a>
                 <a href="articles.html" class="text-sm font-medium transition-colors border-none bg-transparent cursor-pointer text-foreground hover:text-accent">מאמרים ופרסומים</a>
-                <a href="./index.html#contact" class="text-sm font-medium transition-colors border-none bg-transparent cursor-pointer text-foreground hover:text-accent">צור קשר</a>
+                <a href="javascript:void(0)" onclick="openContactPopup()" class="text-sm font-medium transition-colors border-none bg-transparent cursor-pointer text-foreground hover:text-accent">צור קשר</a>
             </nav>
             
             <div class="hidden md:flex items-center gap-4">
@@ -84,7 +84,7 @@
                 <a href="javascript:void(0)" onclick="navigateAndScroll('firm-principles')" class="block w-full py-2 px-4 rounded-lg transition-colors border-none bg-transparent cursor-pointer text-right hover:bg-secondary">עקרונות המשרד</a>
                 <a href="javascript:void(0)" onclick="navigateAndScroll('practice-areas')" class="block w-full py-2 px-4 rounded-lg transition-colors border-none bg-transparent cursor-pointer text-right hover:bg-secondary">תחומי התמחות</a>
                 <a href="articles.html" class="block w-full py-2 px-4 rounded-lg transition-colors border-none bg-transparent cursor-pointer text-right hover:bg-secondary">מאמרים ופרסומים</a>
-                <a href="./index.html#contact" class="block w-full py-2 px-4 rounded-lg transition-colors border-none bg-transparent cursor-pointer text-right hover:bg-secondary">צור קשר</a>
+                <a href="javascript:void(0)" onclick="openContactPopup()" class="block w-full py-2 px-4 rounded-lg transition-colors border-none bg-transparent cursor-pointer text-right hover:bg-secondary">צור קשר</a>
                 <div class="pt-3 border-t border-border">
                     <div class="flex items-center gap-1 bg-secondary rounded-lg p-1 w-fit mx-auto">
                         <button class="px-3 py-1.5 text-xs font-medium rounded transition-all bg-accent text-white shadow-sm" aria-label="Switch to עב">עב</button>
@@ -149,8 +149,20 @@
             </div>
         </div>
         <!-- END articles section -->
+
+        <div style="text-align: center; margin-top: 1rem; margin-bottom: 3rem;">
+            <button onclick="openContactPopup()"
+                class="inline-flex items-center gap-2 px-8 py-3 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-all"
+                style="cursor: pointer; border: none; font-family: inherit; font-size: 1rem;">
+                צור קשר
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
     </div>
 
+    <script src="./assets/contact-popup.js"></script>
     <script src="./assets/cookie-consent.js"></script>
     <script>
         // Mobile Menu Toggle

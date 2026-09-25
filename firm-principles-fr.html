@@ -10,7 +10,7 @@
     <meta name="author" content="Yafit Shimon Touati Law Office" />
 
     <link rel="icon" type="image/png" href="./favicon.png" />
-    <link rel="canonical" href="https://www.yafit-law.com/firm-principles-fr.html" />
+    <link rel="canonical" href="https://www.yst-law.com/firm-principles-fr.html" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -159,8 +159,9 @@
                 <a href="./index.html#practice-areas"
                     class="text-base font-medium text-primary hover:text-accent transition-colors">Domaines
                     d'expertise</a>
-                <a href="./index.html#contact"
-                    class="px-5 py-2.5 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-all shadow-lg shadow-accent/25">Contactez-nous</a>
+                <button onclick="openContactPopup()"
+                    class="px-5 py-2.5 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-all shadow-lg shadow-accent/25"
+                    style="cursor:pointer;border:none;font-family:inherit;font-size:1rem;">Contactez-nous</button>
             </nav>
 
             <!-- Language Switcher & Mobile Menu -->
@@ -197,8 +198,7 @@
                 <a href="./firm-principles-fr.html" class="text-lg font-medium text-accent">Principes du Cabinet</a>
                 <a href="./index.html#practice-areas"
                     class="text-lg font-medium text-primary hover:text-accent">Domaines d'expertise</a>
-                <a href="./index.html#contact"
-                    class="text-lg font-medium text-primary hover:text-accent">Contactez-nous</a>
+                <a href="javascript:void(0)" onclick="openContactPopup()" class="text-lg font-medium text-primary hover:text-accent">Contactez-nous</a>
                 <div class="flex justify-center gap-4 mt-4 border-t pt-4">
                     <a href="./firm-principles.html" class="text-muted-foreground">HE</a>
                     <a href="./firm-principles-en.html" class="text-muted-foreground">EN</a>
@@ -228,13 +228,13 @@
                         <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span class="value-text">Défense inflexible des droits des clients</span>
+                        <span class="value-text">Détermination et professionnalisme sans compromis</span>
                     </li>
                     <li>
                         <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span class="value-text">Préparation approfondie et précision stratégique</span>
+                        <span class="value-text">Précision et rigueur</span>
                     </li>
                     <li>
                         <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -246,26 +246,19 @@
                         <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span class="value-text">Séparation de l'action juridique de l'émotion personnelle</span>
+                        <span class="value-text">Réflexion stratégique et vision large</span>
                     </li>
                     <li>
                         <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span class="value-text">Communication respectueuse et assertive avec les parties
-                            adverses</span>
+                        <span class="value-text">Accompagnement personnel et attentif</span>
                     </li>
                     <li>
                         <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span class="value-text">Leadership calme axé sur la réduction du stress</span>
-                    </li>
-                    <li>
-                        <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span class="value-text">Approche axée sur la résolution, pas l'escalade</span>
+                        <span class="value-text">Orientation vers des solutions créatives, efficaces et pratiques</span>
                     </li>
                 </ul>
             </div>
@@ -278,17 +271,18 @@
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="./index.html#contact"
+                <button onclick="openContactPopup()"
                     class="inline-flex items-center gap-2 px-8 py-3 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-all"
-                    style="text-decoration: none;">
+                    style="cursor: pointer; border: none; font-family: inherit; font-size: 1rem;">
                     Contactez-nous
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
-                </a>
+                </button>
             </div>
         </div>
     </div>
+    <script src="./assets/contact-popup.js"></script>
     <script src="./assets/cookie-consent.js"></script>
     <script>
         // Mobile Menu Toggle

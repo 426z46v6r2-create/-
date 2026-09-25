@@ -1,0 +1,14 @@
+.phone-ltr {
+    direction: ltr !important;
+    unicode-bidi: embed !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+    text-align: left !important;
+}
+
+/* Force correct display of phone numbers inside RTL contexts */
+.phone-number {
+    direction: ltr;
+    unicode-bidi: isolate;
+    white-space: nowrap;
+}

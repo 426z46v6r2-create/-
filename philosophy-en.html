@@ -10,7 +10,7 @@
     <meta name="author" content="Yafit Shimon Touati Law Office" />
 
     <link rel="icon" type="image/png" href="./favicon.png" />
-    <link rel="canonical" href="https://www.yafit-law.com/philosophy-en.html" />
+    <link rel="canonical" href="https://www.yst-law.com/philosophy-en.html" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -189,9 +189,9 @@
                     Principles</a>
                 <a href="./index.html#practice-areas"
                     class="text-base font-medium text-primary hover:text-accent transition-colors">Practice Areas</a>
-                <a href="./index.html#contact"
-                    class="px-5 py-2.5 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-all shadow-lg shadow-accent/25">Contact
-                    Us</a>
+                <button onclick="openContactPopup()"
+                    class="px-5 py-2.5 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-all shadow-lg shadow-accent/25"
+                    style="cursor:pointer;border:none;font-family:inherit;font-size:1rem;">Contact Us</button>
             </nav>
 
             <!-- Language Switcher & Mobile Menu -->
@@ -228,8 +228,7 @@
                     Principles</a>
                 <a href="./index.html#practice-areas"
                     class="text-lg font-medium text-primary hover:text-accent">Practice Areas</a>
-                <a href="./index.html#contact" class="text-lg font-medium text-primary hover:text-accent">Contact
-                    Us</a>
+                <a href="javascript:void(0)" onclick="openContactPopup()" class="text-lg font-medium text-primary hover:text-accent">Contact Us</a>
                 <div class="flex justify-center gap-4 mt-4 border-t pt-4">
                     <a href="./philosophy.html" class="text-muted-foreground">HE</a>
                     <a href="./philosophy-en.html" class="font-bold text-accent">EN</a>
@@ -263,10 +262,11 @@
                             stroke-width="2">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        Resolute Protection of Rights
+                        Determination
                     </h3>
                     <p class="principle-desc">
-                        I defend my clients' interests with unwavering dedication.
+                        I am determined to protect my clients' interests and rights, choosing the right and most
+                        effective legal path to achieve their goals.
                     </p>
                 </div>
 
@@ -276,11 +276,11 @@
                             stroke-width="2">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        Accuracy and Precision
+                        Accuracy and Thoroughness as the Key to Success
                     </h3>
                     <p class="principle-desc">
-                        High-quality legal work requires precision. I ensure a thorough examination of all documents,
-                        and a deep analysis of relevant precedents.
+                        Quality legal work requires attention to detail. I ensure thorough examination and in-depth
+                        analysis of the material, alongside comprehensive review of relevant law and precedents.
                     </p>
                 </div>
 
@@ -290,10 +290,12 @@
                             stroke-width="2">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        Professional-Personal Balance
+                        Strategic Thinking and Broad Vision
                     </h3>
                     <p class="principle-desc">
-                        Even in adversarial situations, I separate legal tasks from personal conflict.
+                        Optimal legal representation is not just about what can be done, but also what should be done.
+                        I examine the full picture, the alternatives, and the implications of each move, in order to
+                        choose the path that best serves the client's goals.
                     </p>
                 </div>
 
@@ -303,10 +305,12 @@
                             stroke-width="2">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        Constructive Communication
+                        Professionalism alongside Humanity
                     </h3>
                     <p class="principle-desc">
-                        Maintaining respectful, open dialogue with opposing counsel often leads to better results.
+                        There is no need to turn a dispute into a personal battle. I believe it is possible to stand
+                        firm in protecting the client's rights while maintaining professionalism, respectful
+                        communication, and constructive relations with the opposing party and their counsel.
                     </p>
                 </div>
 
@@ -316,12 +320,12 @@
                             stroke-width="2">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        Reducing Tension
+                        Personal and Attentive Accompaniment
                     </h3>
                     <p class="principle-desc">
-                        Instead of perpetuating conflict and discord, I strive to manage disputes in a pleasant and
-                        respectful yet firm manner. I believe it is possible to be legally assertive while remaining
-                        human.
+                        It is important to me to understand the client's needs and goals, and to accompany them in a
+                        personal and attentive manner, providing tools and preparation for dealing with the challenges
+                        and pressures involved in legal proceedings.
                     </p>
                 </div>
 
@@ -331,11 +335,12 @@
                             stroke-width="2">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        Solution-Focused Representation
+                        Solution-Focused
                     </h3>
                     <p class="principle-desc">
-                        My goal is to find the optimal solution for the client. I seek creative, efficient, and
-                        practical solutions.
+                        The goal is to reach the best solution for the client. I strive to find creative, efficient,
+                        and practical solutions, with a broad view of the client's needs, goals, and the implications
+                        of each move.
                     </p>
                 </div>
             </div>
@@ -352,17 +357,18 @@
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="./index.html#contact"
+                <button onclick="openContactPopup()"
                     class="inline-flex items-center gap-2 px-8 py-3 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-all"
-                    style="text-decoration: none;">
+                    style="cursor: pointer; border: none; font-family: inherit; font-size: 1rem;">
                     Contact Us
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
-                </a>
+                </button>
             </div>
         </div>
     </div>
+    <script src="./assets/contact-popup.js"></script>
     <script src="./assets/cookie-consent.js"></script>
     <script>
         // Mobile Menu Toggle
